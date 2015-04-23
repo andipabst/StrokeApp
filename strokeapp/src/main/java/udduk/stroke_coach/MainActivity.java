@@ -33,6 +33,7 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        StartAppSDK.init(this, "111333832", "201238307", false);
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null)
@@ -53,7 +54,6 @@ public class MainActivity extends ActionBarActivity
         Banner banner = (Banner) findViewById(R.id.startAppBanner);
         if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ads_enabled", true))
         {
-            StartAppSDK.init(this, "111333832", "201238307", false);
             banner.showBanner();
         }
         else

@@ -40,6 +40,6 @@
     <string name="ads_off">Please support us by watching some ads!</string>
     <string name="ads_explanation">Showing ads helps us to provide you free and high-quality apps. It takes some time
         and effort to produce such great apps and this is a good way to give us something back for our work, without
-        annoying the users too much. \nThank you very much for your understanding!</string>
+        annoying the users too much. \nThank you very much for your understanding!\n\nNOTE: You probably have to restart the app completely for the changes to take effect!</string>
 
 </resources>
