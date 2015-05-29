@@ -16,11 +16,12 @@
   -->
 
 <resources>
-    <color name="accent">#33B5E5</color>
-    <color name="primary">#33B5E5</color>
-    <color name="primary_dark">#0099CC</color>
-    <color name="orange_button">#ffffac50</color>
-    <color name="green_button">#ff81ff7d</color>
-    <color name="yellow_button">#ffffeb67</color>
-    <color name="red_button">#ffff634a</color>
+    <color name="accent">#2196f3</color>
+    <color name="primary">#2196f3</color>
+    <color name="primary_dark">#1976d2</color>
+    <color name="orange_button">#ff9800</color>
+    <color name="green_button">#ff4caf50</color>
+    <color name="yellow_button">#ffeb3b</color>
+    <color name="red_button">#fff44336</color>
+    <color name="gray_button">#9e9e9e</color>
 </resources>

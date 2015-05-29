@@ -36,8 +36,8 @@ android {
         applicationId "udduk.stroke_coach"
         minSdkVersion 11
         targetSdkVersion 22
-        versionCode 3
-        versionName "1.6.1"
+        versionCode 4
+        versionName "1.6.3"
     }
 
     compileOptions {
@@ -55,5 +55,5 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.0'
 }

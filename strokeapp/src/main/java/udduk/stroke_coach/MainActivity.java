@@ -19,7 +19,7 @@ package udduk.stroke_coach;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -27,7 +27,7 @@ import com.startapp.android.publish.StartAppSDK;
 import com.startapp.android.publish.banner.Banner;
 import udduk.stroke_coach.settings.SettingsActivity;
 
-public class MainActivity extends ActionBarActivity
+public class MainActivity extends AppCompatActivity
 {
     private long backPressedTime = 0;
 

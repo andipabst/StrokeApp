@@ -18,12 +18,12 @@ package udduk.stroke_coach.settings;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import udduk.stroke_coach.R;
 
-public class AdinfoActivity extends ActionBarActivity
+public class AdinfoActivity extends AppCompatActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)

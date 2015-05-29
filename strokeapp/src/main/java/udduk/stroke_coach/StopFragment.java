@@ -21,7 +21,6 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -46,7 +45,6 @@ public class StopFragment extends Fragment implements android.view.View.OnClickL
     private long rateTime = 0L;
     private long startTime = 0L;
     private long saveTime = 0L;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -142,12 +140,18 @@ public class StopFragment extends Fragment implements android.view.View.OnClickL
             if (state == RUNNING)
             {
                 start.setText(R.string.start_time);
+                start.setBackgroundColor(getResources().getColor(R.color.green_button));
+                reset.setBackgroundColor(getResources().getColor(R.color.red_button));
+                reset.setEnabled(true);
                 state = STOP;
                 saveTime = System.currentTimeMillis() - startTime;
             }
             else if (state == STOP || state == RESET)
             {
                 start.setText(R.string.stop_time);
+                start.setBackgroundColor(getResources().getColor(R.color.red_button));
+                reset.setBackgroundColor(getResources().getColor(R.color.gray_button));
+                reset.setEnabled(false);
                 state = RUNNING;
                 startTime = System.currentTimeMillis() - saveTime;
             }
@@ -158,19 +162,10 @@ public class StopFragment extends Fragment implements android.view.View.OnClickL
         }
         else if (view == reset)
         {
-            if (state != RUNNING)
-            {
-                startTime = 0L;
-                saveTime = 0L;
-                state = RESET;
-                result.setText("");
-            }
-            else
-            {
-                Toast toast = Toast.makeText(getActivity().getApplicationContext(), R.string.reset_warning, Toast.LENGTH_SHORT);
-                toast.setGravity(48, 0, 50);
-                toast.show();
-            }
+            startTime = 0L;
+            saveTime = 0L;
+            state = RESET;
+            result.setText("");
         }
         else if (view == strokebutton)
         {
