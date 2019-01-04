@@ -1,5 +1,5 @@
 /*
- *     Copyright (c) 2015 Udduk
+ *     Copyright (c) 2015 Andreas Pabst
  *
  *     Licensed under the Apache License, Version 2.0 (the "License");
  *     you may not use this file except in compliance with the License.
@@ -44,21 +44,6 @@ public class SettingsFragment extends PreferenceFragment
                 public boolean onPreferenceClick(Preference preference)
                 {
                     activity.startActivity(new Intent(activity, LicenseActivity.class));
-
-                    return true;
-                }
-            });
-        }
-
-        Preference show_adinfo = findPreference("show_adinfo");
-        if(show_adinfo != null)
-        {
-            show_adinfo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
-            {
-                @Override
-                public boolean onPreferenceClick(Preference preference)
-                {
-                    activity.startActivity(new Intent(activity, AdinfoActivity.class));
 
                     return true;
                 }

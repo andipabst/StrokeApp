@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~     Copyright (c) 2015 Udduk
+  ~     Copyright (c) 2015 Andreas Pabst
   ~
   ~     Licensed under the Apache License, Version 2.0 (the "License");
   ~     you may not use this file except in compliance with the License.
@@ -39,14 +39,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="10"/>
-
-        <com.startapp.android.publish.banner.Banner
-                android:id="@+id/startAppBanner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"/>
-
     </LinearLayout>
 
 </RelativeLayout>

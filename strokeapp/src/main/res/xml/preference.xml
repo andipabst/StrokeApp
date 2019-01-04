@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~     Copyright (c) 2015 Udduk
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~     Copyright (c) 2015 Andreas Pabst
   ~
   ~     Licensed under the Apache License, Version 2.0 (the "License");
   ~     you may not use this file except in compliance with the License.
@@ -17,28 +16,22 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
-            android:key="show_adinfo"
-            android:title="@string/advertisement"
-            android:summary="@string/ads_info"/>
+        android:key="license"
+        android:summary="@string/license_sub"
+        android:title="@string/license" />
 
-    <Preference
-            android:key="license"
-            android:title="@string/license"
-            android:summary="@string/license_sub"/>
+    <PreferenceCategory android:title="@string/about">
 
-    <PreferenceCategory
-            android:title="@string/about">
-
-        <Preference
-                android:title="@string/prefs_web_page" >
-            <intent android:action="android.intent.action.VIEW"
-                    android:data="http://puregram.de/strokeapp" />
-        </Preference>
+        <!--Preference android:title="@string/prefs_web_page">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://puregram.de/strokeapp" />
+        </Preference-->
 
         <Preference
-                android:key="version_nr"
-                android:title="@string/prefs_version"
-                android:selectable="false" />
+            android:key="version_nr"
+            android:selectable="false"
+            android:title="@string/prefs_version" />
 
     </PreferenceCategory>
 

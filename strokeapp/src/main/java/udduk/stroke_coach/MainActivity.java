@@ -1,5 +1,5 @@
 /*
- *     Copyright (c) 2015 Udduk
+ *     Copyright (c) 2015 Andreas Pabst
  *
  *     Licensed under the Apache License, Version 2.0 (the "License");
  *     you may not use this file except in compliance with the License.
@@ -23,8 +23,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
-import com.startapp.android.publish.StartAppSDK;
-import com.startapp.android.publish.banner.Banner;
 import udduk.stroke_coach.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -34,7 +32,6 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "111333832", "201238307", false);
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null)
@@ -46,21 +43,6 @@ public class MainActivity extends AppCompatActivity
         //Toolbar as Actionbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
-    }
-
-    @Override
-    public void onResume()
-    {
-        super.onResume();
-        Banner banner = (Banner) findViewById(R.id.startAppBanner);
-        if(PreferenceManager.getDefaultSharedPreferences(this).getBoolean("ads_enabled", true))
-        {
-            banner.showBanner();
-        }
-        else
-        {
-            banner.hideBanner();
-        }
     }
 
     @Override
