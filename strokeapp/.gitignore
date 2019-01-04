@@ -1,3 +1,5 @@
 /build
 strokeapp-release.apk
 /libs
+
+.idea/
