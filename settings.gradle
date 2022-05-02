@@ -1,0 +1,2 @@
+include ':strokeapp'
+rootProject.name = "StrokeApp"

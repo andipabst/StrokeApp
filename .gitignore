@@ -1,14 +1,8 @@
 .gradle
-local.properties
 .idea/
 .DS_Store
 build/
 play_files/
-build.gradle
-gradle.properties
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
-StrokeApp.iml
+*.iml
+local.properties
 gen/
