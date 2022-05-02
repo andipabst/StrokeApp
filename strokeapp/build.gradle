@@ -13,22 +13,7 @@
  *     See the License for the specific language governing permissions and
  *     limitations under the License.
  */
-
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.3'
-    }
-}
 apply plugin: 'com.android.application'
-
-repositories {
-    google()
-    mavenCentral()
-}
 
 android {
     compileSdkVersion 32
