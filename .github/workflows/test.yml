@@ -19,8 +19,8 @@ jobs:
         distribution: 'temurin'
     - name: setup gradle
       uses: gradle/gradle-build-action@v2
-    - name: build
-      run: ./gradlew build --no-daemon
+    - name: test
+      run: ./gradlew test --no-daemon
 
   integration-test:
     # disable since it is not working
