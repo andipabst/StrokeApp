@@ -30,4 +30,9 @@
           android:orderInCategory="110"
           app:showAsAction="never"/>
 
+    <item android:id="@+id/action_reset"
+        android:title="@string/reset_time"
+        android:orderInCategory="120"
+        app:showAsAction="never"/>
+
 </menu>

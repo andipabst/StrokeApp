@@ -47,7 +47,7 @@ public class StrokeFragment extends Fragment
                 long strokesum = 0L;
                 time = System.currentTimeMillis() - time;
                 long strokerate = 60000L / time;
-                strokerate = (strokerate < 300L) ? strokerate : 300L;
+                strokerate = Math.min(strokerate, 300L);
                 list.add(strokerate);
                 list.remove(0);
                 for(Long aList : list)
@@ -72,11 +72,7 @@ public class StrokeFragment extends Fragment
         }
         else
         {
-            list.add(20L);
-            list.add(20L);
-            list.add(20L);
-
-            rate.setText("0");
+            initializeStrokeRate();
         }
 
         setHasOptionsMenu(true);
@@ -104,5 +100,24 @@ public class StrokeFragment extends Fragment
     {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.menu_stroke,menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_reset) {
+            initializeStrokeRate();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void initializeStrokeRate() {
+        list.clear();
+
+        list.add(20L);
+        list.add(20L);
+        list.add(20L);
+
+        rate.setText("0");
     }
 }
